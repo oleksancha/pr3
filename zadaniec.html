@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Column Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            border: 2px solid #333;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .column-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .column {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: justify;
+        }
+        /* Layout Styles */
+        .one-column .column {
+            width: 100%;
+        }
+        .two-column .column {
+            width: 48%;
+        }
+        .three-column .column {
+            width: 31%;
+        }
+        .four-column .column {
+            width: 23%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="column-layout one-column">
+            <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</div>
+        </div>
+        
+        <div class="column-layout two-column">
+            <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="column">Vivamus lacinia odio vitae vestibulum vestibulum.</div>
+        </div>
+
+        <div class="column-layout three-column">
+            <div class="column">Lorem ipsum dolor sit amet.</div>
+            <div class="column">Consectetur adipiscing elit.</div>
+            <div class="column">Vivamus lacinia odio vitae vestibulum.</div>
+        </div>
+
+        <div class="column-layout four-column">
+            <div class="column">Lorem ipsum.</div>
+            <div class="column">Dolor sit amet.</div>
+            <div class="column">Consectetur adipiscing.</div>
+            <div class="column">Vivamus lacinia.</div>
+        </div>
+
+    </div>
+</body>
+</html>
